@@ -1,0 +1,31 @@
+[
+    '{{repeat(100)}}',
+    {
+      _id: '{{objectId()}}',
+      index: '{{index()}}',
+      prix: '{{floating(20, 1000, 2, "0,0.00")}}€',
+      vendeur: {
+        nom: '{{firstName()}}',
+        prenom: '{{surname()}}',
+        sexe: '{{gender()}}',
+        age: '{{integer(18, 100)}}',
+        contact: {
+          email: '{{email()}}',
+          telephone: '+33{{integer(6,7)}}{{phone("-xx-xx-xx-xx")}}'
+        },
+        adresse: {
+          numero: '{{integer(1, 100)}}',
+          rue: '{{street()}}',
+          codePostal: '{{integer(10000, 99999)}}',
+          ville: '{{city()}}',
+          pays: '{{country(true)}}'
+        }
+      },
+      objet: {
+        nom: '{{lorem(3, "words")}}',
+        description: '{{lorem(10)}}',
+        dateMiseEnVente: '{{date(new Date(1970, 0,1), new Date(), "dd.MM.YYYY")}}',
+        photo: '{{random("bracelet.jpg", "chaussure.jpg", "ciseaux.jpg", "coque_telephone.jpg", "dragon.jpg", "lunette.jpg", "manette.jpg", "montre.jpg", "parfum.jpg", "produit_menage.jpg", "puzzle.jpg", "sac_a_dos.jpg", "souris.jpg", "tapis_souris.jpg", "tasse.jpg")}}'
+      }
+    }
+  ]

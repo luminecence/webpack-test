@@ -1,0 +1,19 @@
+.articles {
+    display : grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+    border: 2px solid grey;
+    margin: 2px;
+    padding: 2px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+}
+
+p {
+    font-size: 1.2rem;
+}
