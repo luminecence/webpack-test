@@ -1,0 +1,88 @@
+= Explication 
+
+== Introduction
+
+Le but de ce projet est d'utiliser webpack en suivant les différents guides sur le https://webpack.js.org/[site de webpack].
+
+L'objectif est également de faire différents tests sur un petit projet.
+
+== Description
+
+Le projet consiste à avoir une petit application permettant de *rechercher des articles*.+
+Il sera également possible de se *connecter au site* afin d'avoir accès avantages.
+
+== Objectifs
+
+.Liste des obectifs
+[cols="1,1,2,10",options="header"]
+|===================================================
+|Etat|Type|Titre|Description
+
+|Fait
+{set:cellbgcolor:lime}
+|Spec
+{set:cellbgcolor!}
+|Afficher les articles
+|Afficher plusieurs articles sur une page
+
+|Pas fait
+{set:cellbgcolor:red}
+|Spec
+{set:cellbgcolor!}
+|Afficher un article
+|Afficher les détails d'un article
+
+|Pas fait
+{set:cellbgcolor:red}
+|Spec
+{set:cellbgcolor!}
+|Pouvoir se déplacer d'une page à une autre
+|Pouvoir se déplacer d'une page à une autre (routeur)
+
+|Pas fait
+{set:cellbgcolor:red}
+|Spec
+{set:cellbgcolor!}
+|Avoir un système de compte utilisateur
+|Avoir un système où l'utilisateur peut se connecter et avoir accès à des informations sur son compte
+
+|Pas fait
+{set:cellbgcolor:red}
+|Technique
+{set:cellbgcolor!}
+|Utiliser des composants
+|Utiliser des composants pour créer les pages (web components)
+
+|En cours
+{set:cellbgcolor:yellow}
+|Outil
+{set:cellbgcolor!}
+|Utiliser webpack pour bundler
+|Utiliser webpack pour bundler les différentes parties de l'application. Prendre également en compte les différents types de fichiers possible.
+
+|Fait
+{set:cellbgcolor:lime}
+|Outil
+{set:cellbgcolor!}
+|Générer un document HTML en utilisant asciidoc
+|Générer un document HTML en utilisant asciidoctor (cf plus bas)
+|===================================================
+
+== Génération d'un document en utilisant asciidoctor
+
+Installation utilisant python est maintenu que pour python 2.X
+
+* Installer https://rubyinstaller.org/[ruby]
+* Installer asciidoctor (https://github.com/asciidoc/asciidoc qui renvoie vers la page des projets git dont : https://github.com/asciidoctor/asciidoctor).
+* Utiliser les https://asciidoctor.org/man/asciidoctor/[commandes] de asciidoctor 
+
+Lien vers doc : https://asciidoctor.org/docs/install-toolchain/
+
+Possible d'utilisé la version JS en théorie mais il faut faire la création de fichier en plus.
+
+Commande pour générer la génération du HTML :
+----
+asciidoctor site/asciidoc/explication.adoc -D site/html
+----
+
+

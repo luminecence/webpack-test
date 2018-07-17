@@ -1,10 +1,11 @@
-import Recherche from "./Recherche";
 import '../../ressources/css/general.css';
+import Connexion from "./Connexion";
 
 window.addEventListener('load', load);
 
 function load() {
-    const recherche = new Recherche();
+    window.location.hash = 'connexion';
+    const connexion = new Connexion();
 
-    recherche.afficher();
+    connexion.afficher();
 }
