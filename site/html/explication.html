@@ -476,43 +476,61 @@ Il sera également possible de se <strong>connecter au site</strong> afin d&#821
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: lime;"><p class="tableblock">Fait</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: lime;"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Afficher les articles</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Afficher plusieurs articles sur une page</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: red;"><p class="tableblock">Pas fait</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: red;"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Afficher un article</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Afficher les détails d&#8217;un article</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: red;"><p class="tableblock">Pas fait</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: red;"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pouvoir se déplacer d&#8217;une page à une autre</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pouvoir se déplacer d&#8217;une page à une autre (routeur)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: red;"><p class="tableblock">Pas fait</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: red;"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Spec</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Avoir un système de compte utilisateur</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Avoir un système où l&#8217;utilisateur peut se connecter et avoir accès à des informations sur son compte</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: red;"><p class="tableblock">Pas fait</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: red;"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spec</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avoir une carte pour visualiser les adresses des vendeurs</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Avoir une carte pour pouvoir voir les adresses des vendeurs. Carte possible :+
+* <a href="https://developers.google.com/maps/documentation/?hl=fr">Google maps</a> (devenu payant)
+* <a href="https://leafletjs.com/">leafletjs</a>
+* <a href="http://polymaps.org/docs/">Polymap</a>
+* <a href="https://www.mapbox.com/mapbox-gl-js/api/">mapbox</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: red;"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Technique</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utiliser des composants</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utiliser des composants pour créer les pages (web components)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: yellow;"><p class="tableblock">En cours</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: yellow;"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outil</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utiliser webpack pour bundler</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utiliser webpack pour bundler les différentes parties de l&#8217;application. Prendre également en compte les différents types de fichiers possible.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: lime;"><p class="tableblock">Fait</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: red;"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Outil</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mettre en place cucumber/gherkin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Faire des tests en utilisant cucumber/gherkin et karma, mocha, chai</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: lime;"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outil</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Générer un document HTML en utilisant asciidoc</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Générer un document HTML en utilisant asciidoctor (cf plus bas)</p></td>
@@ -556,10 +574,59 @@ Il sera également possible de se <strong>connecter au site</strong> afin d&#821
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_cucumber_gherkin">Cucumber &amp; Gherkin</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_installation">Installation</h3>
+<div class="listingblock">
+<div class="content">
+<pre>npm install cucumber --save-dev</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utilisation">Utilisation</h3>
+<div class="paragraph">
+<p>Faire un fichier <code>cucumber.js</code> à la racine afin d&#8217;y mettre les options.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">module.exports = {
+    default: `--format-options '{"snippetInterface": "synchronous"}'`
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On crée un fichier <code>stepdefs.js</code> dans "test/features/step_definitions" qui va contenir les définitions associées aux fichiers gherkins. C&#8217;est dans ce fichier que sera fait le test en spécifiant ce que devra faire le <code>Given</code>, <code>When</code> et <code>Then</code>.</p>
+</div>
+<div class="paragraph">
+<p>On crée un fichier <code>test.feature</code> dans "test/features" qui va contenir les tests écrit au format gherkin.</p>
+</div>
+<div class="paragraph">
+<p>Dans le fichier <code>package.json</code>, il faut ajouter un script <strong>test</strong>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"test": "cucumber-js test/features/**/*.feature"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le paramètre qui est passé permet de spécifier où se situe les fichiers features à exécuter.</p>
+</div>
+<div class="paragraph">
+<p>Lien vers la documentation : <a href="https://docs.cucumber.io/" class="bare">https://docs.cucumber.io/</a></p>
+</div>
+<div class="paragraph">
+<p>Lien vers le github : <a href="https://github.com/cucumber/cucumber-js/blob/master/docs/cli.md" class="bare">https://github.com/cucumber/cucumber-js/blob/master/docs/cli.md</a></p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-07-17 23:02:08 Paris, Madrid (heure dÆÚtÚ)
+Last updated 2018-07-18 23:05:56 Paris, Madrid (heure dÆÚtÚ)
 </div>
 </div>
 </body>

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "test": "cucumber-js test/features/**/*.feature",
+    "generer-site": "asciidoctor site/asciidoc/explication.adoc -D site/html"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
+    "cucumber": "^4.2.1",
     "eslint": "^5.1.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-loader": "^2.0.0",

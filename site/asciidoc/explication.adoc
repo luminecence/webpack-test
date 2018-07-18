@@ -18,49 +18,68 @@ Il sera également possible de se *connecter au site* afin d'avoir accès avanta
 |===================================================
 |Etat|Type|Titre|Description
 
-|Fait
+|
 {set:cellbgcolor:lime}
 |Spec
 {set:cellbgcolor!}
 |Afficher les articles
 |Afficher plusieurs articles sur une page
 
-|Pas fait
+|
 {set:cellbgcolor:red}
 |Spec
 {set:cellbgcolor!}
 |Afficher un article
 |Afficher les détails d'un article
 
-|Pas fait
+|
 {set:cellbgcolor:red}
 |Spec
 {set:cellbgcolor!}
 |Pouvoir se déplacer d'une page à une autre
 |Pouvoir se déplacer d'une page à une autre (routeur)
 
-|Pas fait
+|
 {set:cellbgcolor:red}
 |Spec
 {set:cellbgcolor!}
 |Avoir un système de compte utilisateur
 |Avoir un système où l'utilisateur peut se connecter et avoir accès à des informations sur son compte
 
-|Pas fait
+|
+{set:cellbgcolor:red}
+|Spec
+{set:cellbgcolor!}
+|Avoir une carte pour visualiser les adresses des vendeurs
+
+a| Avoir une carte pour pouvoir voir les adresses des vendeurs. Carte possible :+
+* https://developers.google.com/maps/documentation/?hl=fr[Google maps] (devenu payant)
+* https://leafletjs.com/[leafletjs]
+* http://polymaps.org/docs/[Polymap]
+* https://www.mapbox.com/mapbox-gl-js/api/[mapbox]
+
+|
 {set:cellbgcolor:red}
 |Technique
 {set:cellbgcolor!}
 |Utiliser des composants
 |Utiliser des composants pour créer les pages (web components)
 
-|En cours
+|
 {set:cellbgcolor:yellow}
 |Outil
 {set:cellbgcolor!}
 |Utiliser webpack pour bundler
 |Utiliser webpack pour bundler les différentes parties de l'application. Prendre également en compte les différents types de fichiers possible.
 
-|Fait
+|
+{set:cellbgcolor:red}
+|Outil
+{set:cellbgcolor!}
+|Mettre en place cucumber/gherkin
+|Faire des tests en utilisant cucumber/gherkin et karma, mocha, chai
+
+|
 {set:cellbgcolor:lime}
 |Outil
 {set:cellbgcolor!}
@@ -85,4 +104,38 @@ Commande pour générer la génération du HTML :
 asciidoctor site/asciidoc/explication.adoc -D site/html
 ----
 
+== Cucumber & Gherkin
 
+=== Installation
+
+----
+npm install cucumber --save-dev
+----
+
+=== Utilisation
+
+Faire un fichier `cucumber.js` à la racine afin d'y mettre les options.
+
+[source, javascript]
+----
+module.exports = {
+    default: `--format-options '{"snippetInterface": "synchronous"}'`
+  }
+----
+
+On crée un fichier `stepdefs.js` dans "test/features/step_definitions" qui va contenir les définitions associées aux fichiers gherkins. C'est dans ce fichier que sera fait le test en spécifiant ce que devra faire le `Given`, `When` et `Then`.
+
+On crée un fichier `test.feature` dans "test/features" qui va contenir les tests écrit au format gherkin.
+
+Dans le fichier `package.json`, il faut ajouter un script *test*.
+
+[source, json]
+----
+"test": "cucumber-js test/features/**/*.feature"
+----
+
+Le paramètre qui est passé permet de spécifier où se situe les fichiers features à exécuter.
+
+Lien vers la documentation : https://docs.cucumber.io/
+
+Lien vers le github : https://github.com/cucumber/cucumber-js/blob/master/docs/cli.md
